@@ -1,0 +1,238 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;  /*O tamanho do elemento inclui bordas e padding..*/
+    overflow-x: hidden;  /*: Esconde o conteúdo que ultrapassa a largura na horizontal.*/
+    font-family: "Josefin Sans", serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    padding: 15px 0px;
+    position: fixed;
+    width: 100%;
+    background-color: #2339c6;
+    z-index: 9999;
+}
+
+header nav ul{
+    list-style: none;
+    text-align: center;
+    
+}
+
+header nav ul li{
+display: inline;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 2px 20px;
+    display: inline-block;
+    
+    
+}
+header nav ul li a:hover{
+color: #023E73
+}
+
+section{   /*A tag <section> é usada para definir uma seção da página (geralmente uma parte do conteúdo).*/
+width: 100%;
+height: 567px;
+
+overflow-x: hidden;
+}
+
+section,footer{
+    padding-top: 55px;
+}
+ section:nth-child(even){
+background-color: #6a99da;
+
+ }
+
+section,footer{  
+    padding-top: 60px;  /*A propriedade padding-top adiciona um espaço interno (também conhecido como "preenchimento") no topo do elemento (no caso, no topo da <section> e do <footer>).*/
+    padding-bottom: 60px; /*A propriedade padding-bottom adiciona um espaço interno na parte inferior do elemento (no caso, na parte inferior da <section> e do <footer>).*/
+ }
+
+ .banner{
+    display: flex; /*ajuste de acordo com a disposição do espaço*/ 
+    align-items: center; /*alinha na vertical*/
+    justify-content: center; /*alinha na horizontal*/
+}
+
+.banner img{
+    width: 100%;
+    height: 100%;
+}
+
+.borda0{
+    border:none;
+}
+
+
+.flexivel{
+    display: flex; /*Isso faz o elemento com essa classe ser um "flex container". Em outras palavras, transforma esse elemento em um "container flexível" onde seus itens internos (filhos) vão se organizar de maneira flexível, usando o modelo Flexbox.*/
+    flex-direction: row; /*organiza os items de forma de linha*/
+    justify-content: space-between; /*AJUSTA o espaço disponivel entre os elementos de forma uniforme*/
+}
+
+article{ /*A tag <article> é usada para definir uma área de conteúdo independente, como um bloco de texto, um artigo, uma notícia, etc.*/
+    width: 100%;
+    text-align: center; /*alinha o texto no centro*/
+}
+
+.conteinerCursos{
+    justify-content: space-around; /*Controla como os itens dentro do container são distribuídos ao longo do eixo principal (horizontal por padrão).*/
+    align-items: center; /*Alinha os itens no eixo transversal (geralmente o eixo vertical). Nesse caso, center faz com que os itens fiquem centralizados verticalmente dentro do container.*/
+    display: flex; /*Isso faz o elemento com essa classe ser um "flex container". Em outras palavras, transforma esse elemento em um "container flexível" onde seus itens internos (filhos) vão se organizar de maneira flexível, usando o modelo Flexbox.*/
+    flex-wrap: wrap; /*Isso faz com que, se os itens não caberem em uma única linha (ou coluna, dependendo da orientação), eles vão "quebrar" e passar para a próxima linha. Ou seja, se não tiver espaço suficiente para todos os itens, eles se reorganizam automaticamente.*/
+}
+
+.mini{
+    width: 49%; /*A propriedade width define a largura do elemento.*/
+    padding: 10px;
+    cursor: pointer; /*A propriedade cursor controla o tipo de cursor (a setinha) que aparece quando o usuário passa o mouse sobre o elemento.
+    pointer faz com que o cursor mude para uma mãozinha, indicando que o elemento pode ser clicado (muito usado em botões ou links).*/
+}
+
+.parallax{ 
+/*Efeito Parallax é uma técnica de design onde os elementos de fundo se movem a uma velocidade diferente dos elementos de primeiro plano, criando uma sensação de profundidade ao rolar a página. Esse efeito é muito comum em sites modernos para dar um toque dinâmico*/
+background-attachment: fixed;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.p1{
+    background-image: url(./img/img/paralax22.webp)
+}
+
+.p2{
+    background-image: url(./img/img/paralax1.webp);
+}
+
+.p3{
+    background-image: url(./img/img/paralax3.webp)
+}
+
+
+.TamanhoImagem{   /*A tag <section> é usada para definir uma seção da página (geralmente uma parte do conteúdo).*/
+    width: 79.6%;
+}
+ footer{
+    background-color: #0b3555;
+ }
+
+ .aling-center{
+   text-align: center;
+ }
+
+ .bannerimg{
+    width: 100%;
+    height: 426px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row; /*organiza os items de forma de linha*/
+    overflow-x: hidden;
+}
+
+.texto{
+    display: flex;
+    text-align: justify;
+    margin-bottom: 10px;
+    }
+
+.alinhatexto{
+ margin-right: 35px;
+}
+
+   /* MODAL */
+.janelaModal {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding-top: 50px;
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.mostraJanelaModal {
+    display: block;
+}
+.escondeJanelaModal {
+    display: none;
+}
+.fecharModal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+.imgModal {
+    margin: auto;
+    display: block;
+    width: 500px;
+    max-width: 100%;
+}
+.txtModal {
+    margin: auto;
+    padding: 20px;
+    display: block;
+    width: 80%;
+    text-align: center;
+    color: #f9f9f9;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+/*fav icon é um pequeno icone de site, ele normalmente aparece la em cima do site. para chamar ele deve realizar por meio da tag link*/
+
+.arredonda{   
+    border-radius: 50px;
+    box-shadow: 15px 15px 15px 5px rgba(0, 0, 0, 0.15);
+    
+    
+}    
+
+.arredonda2{ 
+    box-shadow: 10px 10px 10px 7px rgb(24, 17, 105);
+    margin-left: 3%;
+    margin-right: 3%;
+}    
+
+.titulo{
+    font-family: 'Playfair Display Italic', serif;
+}
+
+.texto2{
+    display: flex;
+    text-align: justify; 
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.txt{
+  text-align: justify;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+/**/
